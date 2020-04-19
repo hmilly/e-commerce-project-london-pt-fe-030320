@@ -1,0 +1,62 @@
+.top-nav-l{
+  width: 40%;
+  margin-right: 10%;
+  position: fixed;
+  padding: 2%;
+  border: black solid 1px;
+}
+.bottom-nav-l {
+  width: 100%;
+  position: fixed;
+  padding: 2%;
+  border: black solid 1px;
+  bottom: 0;
+margin: 1%, 15%, 1%, 15%;
+}
+
+.top-nav-l > a, .bottom-nav-l  > a {
+  display:inline;
+  color: black;
+  text-align: center;
+  padding: 3%;
+  font-size: 1vw;
+  text-decoration: none;
+}
+.top-nav-l  > a.active , .bottom-nav-l  > a.active {
+  font-weight: 900;
+  text-decoration: underline;
+  color: rgb(186, 255, 117);
+}
+.top-nav-l > a:hover, .bottom-nav-l > a:hover{
+  color: rgb(90, 195, 90);
+  font-weight: 900;
+}
+
+
+
+
+.top-nav-r{
+  margin-left: 80%;
+  width: 20%;
+  position: fixed;
+  padding: 1.5%;
+  border: black solid 1px;
+}
+
+.top-nav-r > a{
+  display:inline;
+  color: black;
+  text-align: center;
+  padding: 8%;
+  font-size: 1vw;
+  text-decoration: none;
+}
+.top-nav-r  > a.active{
+  font-weight: 900;
+  text-decoration: underline;
+  color: rgb(186, 255, 117);
+}
+.top-nav-r > a:hover{
+  color: rgb(90, 195, 90);
+  font-weight: 900;
+}
