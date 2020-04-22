@@ -1,0 +1,307 @@
+
+  @font-face {
+    font-family: "aventir";
+    src: url(./pix/aventir/AvenirLTStd-Medium.otf);
+  }
+*{
+    box-sizing: border-box;
+    font-family: "aventir", Times, serif;
+    border: black solid 1px;
+  }
+
+  /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
+  /*navigation bars position for each one */
+  .body{
+    width: 98%;
+    height: auto;
+  }
+
+  .top-nav-l{
+    min-width: 75%;
+    position: fixed;
+    padding: 1%;
+  }
+  .top-nav-l > i {
+      font-size: 150%;
+      padding-right: 3%; 
+  }
+  /*main nav active class */
+  .top-nav-l  > a.active{
+    color: rgb(90, 195, 90);
+  }
+
+
+
+
+  .top-nav-r{
+    width: 20%;
+    position: fixed;
+    text-align: right;
+    left: 77%;
+    padding: 1%;
+  }
+  .top-nav-r > i{
+    font-size: 150%;
+    padding-right: 10%;
+    color: black;
+  }
+
+
+  
+  /*top nav menu styles*/
+  .top-nav-l > a, .top-nav-r > a {
+    display:inline;
+    color: black;
+    text-align: center;
+    padding: 1.5%;
+    font-size: 80%;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+
+  
+  /*if under screen size: */
+  @media screen and (max-width: 750px) {
+    .bottom-nav-l {text-align: center; bottom: 4%; height: 10%}
+    .bottom-nav-l  > a {font-size: 80%; padding: 2%;}
+    .bottom-nav-l > div > a  {font-size: 150%; padding: 2%}
+    .bottom-nav-l > div {display:block; padding: 0;}
+  }
+  
+  @media screen and (max-width: 450px) {
+    .top-nav-l {width: 100%}
+    .top-nav-r {top: 4%; width: 26%; left: 74%}
+    .top-nav-l > a, .top-nav-r > a  {font-size: 80%; padding: 3%;}
+  }
+
+  /*^^^^^^^^^^^^^^^^^^^ NAV STYLING ^^^^^^^^^^^^^^^^^^^^*/
+
+
+  /*-----------best match line -----------*/
+.search-match-div {
+  position: fixed;
+  text-align: center;
+  top: 8%;
+  left: 4%;
+  width: 92%;
+  height: 5%;
+}
+.src-bar {
+  position: relative;
+  text-align: left;
+  top: 1%;
+  left: 2%;
+  width: 68%;
+  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
+}
+.fa-search{
+  font-size: 250%; 
+  padding-bottom: 1%;
+  color: rgba(128, 128, 128, 0.527);
+}
+.bestmatch {
+  position: relative;
+  text-align: left;
+  bottom: 50%;
+  height: 50%;
+  left: 74%;
+  width: 25%;
+  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
+}
+.fa-angle-down{
+  position: relative;
+  font-size: 150%;
+  padding-top: 1%; 
+  float: right;
+  color: grey;
+}
+
+
+
+
+
+/*-----------main container  -----------*/
+.filter-img-div{
+  min-width: 95%;
+  min-height: auto;
+  top: 16%;
+  height: 60%;
+  left: 2.5%;
+  position: fixed;
+  text-align: center;
+}
+
+
+/*----------- filter stylings -----------*/
+.filter-div{
+  height: 100%;
+  float: left;
+  width: 22%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------image and text div stylings-----------*/
+.img-div{
+  height: 100%;
+  float: right;
+  width: 78%;
+}
+.top{
+  float: top;
+  padding: 3%;
+  height: 50%;
+  width: 100%;
+}
+.btm{
+  float: bottom;
+  padding: 3%;
+  height: 50%;
+  width: 100%;
+}
+
+/*-----------images positions -----------*/
+.img1{
+  background-image: url(./pix/1.png);
+}
+.img2{
+  background-image: url(./pix/2.png);
+}
+.img3{
+  background-image: url(./pix/3.png);
+}
+.img4{
+  background-image: url(./pix/4.png);
+}
+.img5{
+  background-image: url(./pix/5.png);
+}
+.img6{
+  background-image: url(./pix/6.png);
+}
+.img1, .img2, .img3, .img4, .img5, .img6{
+  background-position: center; 
+  background-size: cover;
+  left: 1%;
+  width: 29%;
+  height: 95%;
+  max-height: 95%;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+.img1, .img4{ 
+  left: 0;
+  top: -4%;
+}
+.img2, .img5{
+  left: 7%;
+  top: -4%;
+}
+.img3, .img6{
+  left: 14%;
+  top: -4%;
+}
+
+
+
+/*-----------imageS OVERLAP TEXT positions -----------*/
+.img-p1, .img-p2, .img-p3{
+  background-color: white;
+  position: absolute;
+  text-align: left;
+  text-emphasis: bold;
+  bottom: 3%;
+  top: 33%;
+  width: 15%;
+  height: 12%;
+}
+.img-p4, .img-p5, .img-p6{
+  background-color: white;
+  position: absolute;
+  text-align: left;
+  text-emphasis: bold;
+  top: 2%;
+  top: 84%;
+  width: 15%;
+  height: 12%;
+}
+.img-p1, .img-p4{
+  left: 24.5%;
+}
+.img-p2, .img-p5{
+  left: 50.5%;
+}
+.img-p3, .img-p6{
+  left: 77%;
+}
+
+
+/*-----------image PRICE positions -----------*/
+.price1, .price2, .price3{
+  position: absolute;
+  top: 39%;
+  height: 8%;
+}
+.price4, .price5, .price6{
+  position: absolute;
+  top: 88.5%;
+  height: 8%;
+}
+.price1, .price4{
+  left: 39.5%;
+  width: 6.5%;
+}
+.price2, .price5{
+  left: 65.5%;
+  width: 7.5%;
+}
+.price3, .price6{
+  left: 92%;
+  width: 7.5%;
+}
+
+
+
+
+
+
+.bottom-nav-l {
+  min-width: 98%;
+  position: fixed;
+  text-align: center;
+  bottom: 10%;
+  padding: 1%;
+}
+/*bottom menu styles*/
+.bottom-nav-l  > a, .bottom-nav-l > div{
+  display:inline;
+  color: black;
+  text-align: center;
+  padding: 2%;
+  font-size: 80%;
+  font-weight: 700;
+  text-decoration: none;
+}
+/*media div styles*/
+.bottom-nav-l > div > a{
+  color: black;
+  text-align: center;
+  padding: 1%;
+  font-size: 150%;
+  font-weight: 700;
+}
+
+
+
+
+
