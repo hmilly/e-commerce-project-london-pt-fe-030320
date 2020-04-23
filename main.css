@@ -11,27 +11,19 @@
   /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
   /*navigation bars position for each one */
   .body{
-    display: block;
-    width: 100%;
-    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
   }
-
+  
   .top-nav-l{
     min-width: 75%;
     position: fixed;
     padding: 1%;
   }
   .top-nav-l > i {
-      font-size: 150%;
+      font-size: 120%;
       padding-right: 3%; 
   }
-  /*main nav active class */
-  .top-nav-l  > a.active{
-    color: rgb(90, 195, 90);
-  }
-
-
-
 
   .top-nav-r{
     width: 20%;
@@ -41,12 +33,10 @@
     padding: 1%;
   }
   .top-nav-r > i{
-    font-size: 150%;
+    font-size: 120%;
     padding-right: 10%;
     color: black;
   }
-
-
   
   /*top nav menu styles*/
   .top-nav-l > a, .top-nav-r > a {
@@ -54,13 +44,15 @@
     color: black;
     text-align: center;
     padding: 1.5%;
-    font-size: 80%;
+    font-size: 12px;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
   }
 
-  
+  .top-nav-l > a.active{
+    color: rgb(90, 195, 90);
+  }
+
   /*if under screen size: */
   @media screen and (max-width: 750px) {
     .bottom-nav-l {text-align: center; bottom: 4%; height: 10%}
@@ -102,6 +94,7 @@
 .bestmatch {
   position: relative;
   text-align: left;
+  font-size: 12px;
   bottom: 45%;
   height: 50%;
   left: 74%;

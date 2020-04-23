@@ -3,7 +3,9 @@
     font-family: "aventir";
     src: url(./pix/aventir/AvenirLTStd-Medium.otf);
   }
+
 *{
+  border: black solid 1px;
     box-sizing: border-box;
     font-family: "aventir", Times, serif;
   }
@@ -11,9 +13,8 @@
   /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
   /*navigation bars position for each one */
   .body{
-    display: block;
-    width: 100%;
-    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .top-nav-l{
@@ -21,17 +22,11 @@
     position: fixed;
     padding: 1%;
   }
+
   .top-nav-l > i {
-      font-size: 150%;
-      padding-right: 3%; 
+    font-size: 120%;
+    padding-right: 3%; 
   }
-  /*main nav active class */
-  .top-nav-l  > a.active{
-    color: rgb(90, 195, 90);
-  }
-
-
-
 
   .top-nav-r{
     width: 20%;
@@ -41,26 +36,22 @@
     padding: 1%;
   }
   .top-nav-r > i{
-    font-size: 150%;
+    font-size: 120%;
     padding-right: 10%;
     color: black;
   }
 
-
-  
   /*top nav menu styles*/
   .top-nav-l > a, .top-nav-r > a {
     display:inline;
     color: black;
     text-align: center;
     padding: 1.5%;
-    font-size: 80%;
+    font-size: 12px;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
   }
 
-  
   /*if under screen size: */
   @media screen and (max-width: 750px) {
     .bottom-nav-l {text-align: center; bottom: 4%; height: 10%}
@@ -75,85 +66,45 @@
     .top-nav-l > a, .top-nav-r > a  {font-size: 80%; padding: 3%;}
   }
 
-  /*^^^^^^^^^^^^^^^^^^^ NAV STYLING ^^^^^^^^^^^^^^^^^^^^*/
 
-.search-match-div {
-  position: fixed;
-  text-align: center;
-  top: 8%;
-  left: 4%;
-  width: 92%;
-  height: 5%;
-}
-
-.src-bar {
-  position: relative;
-  text-align: left;
-  top: 1%;
-  left: 2%;
-  width: 68%;
-  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
-}
-.fa-search{
-  font-size: 250%; 
-  padding-bottom: 1%;
-  color: rgba(128, 128, 128, 0.527);
-}
-.bestmatch {
-  position: relative;
-  text-align: left;
-  bottom: 45%;
-  height: 50%;
-  left: 74%;
-  width: 25%;
-  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
-}
-.fa-angle-down{
-  position: relative;
-  font-size: 150%;
-  padding-top: 1%; 
-  float: right;
-  color: grey;
-}
-
+/*-----------main container  -----------*/
 .img-div{
-  background-image: url(./pix/sofa.png);
-  background-repeat: repeat;
-  background-color: #8c8061;
-  background-position: center; 
-  background-size: cover;
-  min-width: 95%;
+  width: 75%;
   min-height: auto;
-  top: 16%;
-  height: 60%;
-  left: 2.5%;
+  top: 20%;
+  height: 36%;
+  left: 11%;
   position: fixed;
   text-align: center;
 }
 
-.create{
-  color: #FFFFFF;
-  text-shadow: rgb(98, 98, 98) 0px 0px 5px;
-
-  font-weight: bolder;
-  font-size: 300%;
-  position: relative;
-  text-align: left;
-  top: 8%;
-  left: 4%;
+.image{
+  float: left;
+  width: 550px;
+  max-width: 70%;
+  height: auto;
 }
-.relax{
-  color: #FFFFFF;
-  text-shadow: rgb(98, 98, 98) 0px 0px 5px;
-  font-style: normal;
-  font-size: 120%;
-  position: relative;
-  text-align: left;
-  top: 4%;
-  left: 5%;
-  text-decoration: underline;
-
+.info{
+  float: right;
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
 }
+
+.thumbnails{
+  width: 75%;
+  min-height: auto;
+  top: 56%;
+  height: 15%;
+  left: 11%;
+  position: fixed;
+  text-align: center;
+}
+
+
+
+
+
 
 
 

@@ -18,9 +18,9 @@
   <main class="body-main">
     <div class="top-nav-l">
       <i class="fa fa-bars"></i>
-      <a class="main" href="main.html">HOME</a>
-      <a class="listing active" href="listing.html">SHOP</a>
-      <a class="mag" disabled="true">MAGAZINE</a>
+      <a class="title" href="main.html">HOME</a>
+      <a class="title active" href="listing.html">SHOP</a>
+      <a class="title" disabled="true">MAGAZINE</a>
     </div>
     <div class="top-nav-r">
       <i class="fa fa-shopping-cart"></i>
@@ -32,59 +32,145 @@
       <div class="bestmatch">Best Match<i class="fa fa-angle-down"></i></div>
     </div>
 
-
-
     <div class="filter-img-div">
+
       <div class="filter-div">
+        <div class="filter">FILTER BY</div>
+
+        <select class="category">
+          <option value="" disabled selected>Collection</option>
+        </select>
+
+        <select class="category">
+          <option value=""  selected>Colour</option>
+          <option value="Grey">Grey</option>
+          <option value="Brown">Brown</option>
+          <option value="Blue">Blue</option>
+          <option value="Beige">Beige</option>
+          <option value="Green">Green</option>
+          <option value="Red">Red</option>
+          <option value="Gold">Gold</option>
+        </select>
+
+        <select class="category">
+          <option value="" disabled selected>Category</option>
+          <option value="">dik</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+
+        <h3>Price Range</h3>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+          <p>$0 <span id="demo"></span></p>
+          <p>$10,000+ <span id="demo"></span></p>
+        </div>
 
       </div>
-      <div class="img-div">
 
+      <div class="img-div">
         <div class="top">
-          
           <div class="img1">
             <div></div>
           </div>
-          <p class="img-p1">Druid</p>
-          <p class="price1">$2,600</p>
-
+          <div class="img1-txt-box">
+            <div class="img1-txt">
+              <p>Druid</p>
+              <p>SOFA</p>
+            </div>
+            <div class="img1-price">
+              <p>$2,600</p>
+              <i class="fa fa-cart-plus"></i>
+            </div>
+          </div>
           <div class="img2">
             <div></div>
           </div>
-          <p class="img-p2">Corner</p>
-          <p class="price2">$590</p>
-
+          <div class="img2-txt-box">
+            <div class="img2-txt">
+              <p>Corner</p>
+              <p>SOFA</p>
+            </div>
+            <div class="img2-price">
+              <p>$590</p>
+              <i class="fa fa-cart-plus"></i>
+            </div>
+          </div>
           <div class="img3">
             <div></div>
           </div>
-        <p class="img-p3">Celis</p>
-        <p class="price3">$950</p>
-
-      </div>
-
-      <div class="btm">
-        <div class="img4">
-          <div></div>
+          <div class="img3-txt-box">
+            <div class="img3-txt">
+              <p>Celis</p>
+              <p>SOFA</p>
+            </div>
+            <div class="img3-price">
+              <p>$950</p>
+              <i class="fa fa-cart-plus"></i>
+            </div>
+          </div>
         </div>
-        <p class="img-p4">Celis</p>
-        <p class="price4">$890</p>
-
-        <div class="img5">
-          <div></div>
+        <div class="btm">
+          <div class="img4">
+            <div></div>
+          </div>
+          <div class="img4-txt-box">
+            <div class="img4-txt">
+              <p>Celis</p>
+              <p>SOFA</p>
+            </div>
+            <div class="img4-price">
+              <p>$890</p>
+              <i class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="img5">
+            <div></div>
+          </div>
+          <div class="img5-txt-box">
+            <div class="img5-txt">
+              <p>Yenings</p>
+              <p>SOFA</p>
+            </div>
+            <div class="img5-price">
+              <p>$120</p>
+              <i class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="img6">
+            <div></div>
+          </div>
+          <div class="img6-txt-box">
+            <div class="img6-txt">
+              <p>Allisonville</p>
+              <p>SOFA</p>
+            </div>
+            <div class="img6-price">
+              <p>$420</p>
+              <i class="fa fa-cart-plus"></i>
+            </div>
+          </div>
         </div>
-        <p class="img-p5">Yenings</p>
-        <p class="price5">$120</p>
-
-        <div class="img6">
-          <div></div>
-        </div>
-        <p class="img-p6">Allisonville</p>
-        <p class="price6">$420</p>
       </div>
     </div>
+
+    <div class="pg-nums">
+      <div class="num"><p class="p-active">1</p></div>
+      <div class="num"><p>2</p></div>
+      <div class="num"><p>3</p></div>
+      <div class="num"><p>4</p></div>
+      <div class="num"><p>5</p></div>
+      <div class="num"><p>6</p></div>
+      <div class="num"><p>7</p></div>
+      <div class="num"><p>8</p></div>
+      <div class="num"><p>9</p></div>
+      <div class="num"><p>10</p></div>
+      <div class="num"><p>></p></div>
     </div>
-
-
     <!----vvv-- NAV MENU BOTTOM  --vvv------>
     <div class="bottom-nav-l">
       <a class="about" disabled="true">ABOUT US</a>
@@ -96,7 +182,8 @@
         <a class="fa fa-facebook-f"></a>
         <a class="fa fa-twitter"></a>
       </div>
-      <!----^^^^^------ NAV END  ----^^^^------>
+    </div>
+    <!----^^^^^------ NAV END  ----^^^^------>
   </main>
   </div>
 </body>

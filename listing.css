@@ -6,14 +6,14 @@
 *{
     box-sizing: border-box;
     font-family: "aventir", Times, serif;
-    border: black solid 1px;
+
   }
 
   /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
   /*navigation bars position for each one */
   .body{
-    width: 98%;
-    height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .top-nav-l{
@@ -21,17 +21,11 @@
     position: fixed;
     padding: 1%;
   }
+
   .top-nav-l > i {
-      font-size: 150%;
-      padding-right: 3%; 
+    font-size: 120%;
+    padding-right: 3%; 
   }
-  /*main nav active class */
-  .top-nav-l  > a.active{
-    color: rgb(90, 195, 90);
-  }
-
-
-
 
   .top-nav-r{
     width: 20%;
@@ -41,25 +35,25 @@
     padding: 1%;
   }
   .top-nav-r > i{
-    font-size: 150%;
+    font-size: 120%;
     padding-right: 10%;
     color: black;
   }
 
-
-  
   /*top nav menu styles*/
   .top-nav-l > a, .top-nav-r > a {
     display:inline;
     color: black;
     text-align: center;
     padding: 1.5%;
-    font-size: 80%;
+    font-size: 12px;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
   }
 
+  .top-nav-l > a.active{
+    color: rgb(90, 195, 90);
+  }
   
   /*if under screen size: */
   @media screen and (max-width: 750px) {
@@ -75,9 +69,6 @@
     .top-nav-l > a, .top-nav-r > a  {font-size: 80%; padding: 3%;}
   }
 
-  /*^^^^^^^^^^^^^^^^^^^ NAV STYLING ^^^^^^^^^^^^^^^^^^^^*/
-
-
   /*-----------best match line -----------*/
 .search-match-div {
   position: fixed;
@@ -90,6 +81,7 @@
 .src-bar {
   position: relative;
   text-align: left;
+  font-size: 12px;
   top: 1%;
   left: 2%;
   width: 68%;
@@ -103,6 +95,7 @@
 .bestmatch {
   position: relative;
   text-align: left;
+  font-size: 12px;
   bottom: 50%;
   height: 50%;
   left: 74%;
@@ -119,8 +112,6 @@
 
 
 
-
-
 /*-----------main container  -----------*/
 .filter-img-div{
   min-width: 95%;
@@ -132,17 +123,74 @@
   text-align: center;
 }
 
-
-/*----------- filter stylings -----------*/
+/*----------- filter LIST stylings -----------*/
 .filter-div{
   height: 100%;
   float: left;
   width: 22%;
 }
 
+.filter{
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: 10px;
+  padding-bottom: 10%;
+  padding-top: 4%;
+  color:  rgba(179, 179, 179, 0.527);
+}
+ /*----------- SELECT stylings -----------*/
+.category{
+  display: block;
+  position: relative;
+  width: 90%;
+  text-align: left;
+  font-size: 12px;
+  padding-bottom: 5%;
+  padding-top: 3%;
+  border: white solid 1px;
+  border-bottom: rgba(179, 179, 179, 0.527) solid 1px;
+}
 
-
-
+h3{
+  text-align: left;
+  font-size: 12px;
+  padding-top: 4%;
+}
+.slidecontainer {
+  width: 90%;
+  height: 7%;
+  padding: 1%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.5;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  border: black solid 1px;
+  cursor: pointer;
+}
+.slidecontainer > :nth-child(2){
+  font-size: 10px;
+  float: left;
+}
+.slidecontainer > :nth-child(3){
+  font-size: 10px;
+  float: right;
+}
 
 
 
@@ -191,88 +239,118 @@
 .img1, .img2, .img3, .img4, .img5, .img6{
   background-position: center; 
   background-size: cover;
-  left: 1%;
-  width: 29%;
-  height: 95%;
-  max-height: 95%;
-  overflow: hidden;
   position: relative;
+  width: 31.5%;
+  height: 80%;
+  overflow: hidden;
   float: left;
 }
 .img1, .img4{ 
-  left: 0;
   top: -4%;
+  left: -3%;
 }
 .img2, .img5{
-  left: 7%;
+  left: 2%;
   top: -4%;
 }
 .img3, .img6{
-  left: 14%;
+  left: 7%;
   top: -4%;
 }
+/*-----------TEXT BOX positions -----------*/
+.img1-txt-box, .img2-txt-box, .img3-txt-box{
+  position: absolute;
+  top: 30%;
+  left: 22%;
+  width: 23%;
+  height: 17%;
+}
+.img4-txt-box, .img5-txt-box, .img6-txt-box{
+  position: absolute;
+  top: 80%;
+  left: 22%;
+  width: 23%;
+  height: 17%;
+}
+.img2-txt-box, .img5-txt-box{
+  left: 49%;
+}
+.img3-txt-box, .img6-txt-box{
+  left: 75.5%;
+}
 
-
-
-/*-----------imageS OVERLAP TEXT positions -----------*/
-.img-p1, .img-p2, .img-p3{
+/*-----------WHITE OVERLAP TEXT BOX positions -----------*/
+.img1-txt, .img2-txt, .img3-txt, .img4-txt, .img5-txt, .img6-txt{
+  position: relative;
   background-color: white;
-  position: absolute;
+  float: left;
+  height: 100%;
+  width: 70%;
+}
+.img1-txt > :first-child, .img2-txt >:first-child, .img3-txt>:first-child, .img4-txt >:first-child, .img5-txt>:first-child, .img6-txt>:first-child{
+  font-size: 16px;
+  font-weight: 800;
   text-align: left;
-  text-emphasis: bold;
-  bottom: 3%;
-  top: 33%;
-  width: 15%;
-  height: 12%;
+  width: 50%;
+  height: 30%;
 }
-.img-p4, .img-p5, .img-p6{
-  background-color: white;
-  position: absolute;
+.img1-txt > :nth-child(2), .img2-txt >:nth-child(2), .img3-txt>:nth-child(2), .img4-txt >:nth-child(2), .img5-txt>:nth-child(2), .img6-txt>:nth-child(2){
+  font-size: 11px;
+  width: 50%;
+  font-style: normal;
+  font-weight: normal;
   text-align: left;
-  text-emphasis: bold;
-  top: 2%;
-  top: 84%;
-  width: 15%;
-  height: 12%;
-}
-.img-p1, .img-p4{
-  left: 24.5%;
-}
-.img-p2, .img-p5{
-  left: 50.5%;
-}
-.img-p3, .img-p6{
-  left: 77%;
+  margin-top: -15px;
+  height: 30%;
+  color:  rgb(163, 163, 163);
 }
 
 
-/*-----------image PRICE positions -----------*/
-.price1, .price2, .price3{
+/*-----------COST TEXT BOX positions -----------*/
+.img1-price, .img2-price, .img3-price, .img4-price, .img5-price, .img6-price {
+  position: relative;
+  float: right;
+  top: 55%;
+  height: 40%;
+  width: 30%;
+}
+.img1-price>p, .img2-price>p, .img3-price>p, .img4-price>p, .img5-price>p, .img6-price>p {
+  font-size: 12px;
+  text-align: right;
+  margin-top: -1%;
+  height: 30%; 
+}
+.fa-cart-plus{
+margin-top: -5px;
+ float: right;
+}
+
+.pg-nums{
   position: absolute;
-  top: 39%;
-  height: 8%;
+  width: 57%;
+  left: 23%;
+  height: 5%;
+  top: 76%;
 }
-.price4, .price5, .price6{
-  position: absolute;
-  top: 88.5%;
-  height: 8%;
+.num {
+  height: 90%;
+  bottom: -5%;
+  width: 9.09%;
+  float: left;
+  float: inline-start;
 }
-.price1, .price4{
-  left: 39.5%;
-  width: 6.5%;
-}
-.price2, .price5{
-  left: 65.5%;
-  width: 7.5%;
-}
-.price3, .price6{
-  left: 92%;
-  width: 7.5%;
+.num > p{
+  font-size: 10px;
+  text-align: center;
+  margin-top: 2%;
+  padding: 20%;
+  height: 80%;
 }
 
-
-
-
+.p-active{
+  background-color: rgb(90, 195, 90);
+  border-radius: 5%;
+}
 
 
 .bottom-nav-l {
