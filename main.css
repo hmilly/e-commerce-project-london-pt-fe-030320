@@ -11,33 +11,47 @@
   /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
   /*navigation bars position for each one */
   .body{
+    width: 100vw;
+    height: 100vh;
     max-width: 1400px;
+    max-height: 1200px;
     margin: 0 auto;
   }
-  
-  .top-nav-l{
-    min-width: 75%;
+  .top-nav{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
     position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1%;
+  }
+
+  .top-nav-l{
+    width:75%;
+    max-width: 1000px;
+    float: left;
     padding: 1%;
   }
   .top-nav-l > i {
-      font-size: 120%;
-      padding-right: 3%; 
+    font-size: 120%;
+    padding-right: 3%; 
   }
 
   .top-nav-r{
-    width: 20%;
-    position: fixed;
+    width: 25%;
+    max-width: 200px;
     text-align: right;
-    left: 77%;
+    float: right;
     padding: 1%;
   }
   .top-nav-r > i{
     font-size: 120%;
+    text-align: left;
     padding-right: 10%;
     color: black;
   }
-  
+
   /*top nav menu styles*/
   .top-nav-l > a, .top-nav-r > a {
     display:inline;
@@ -48,11 +62,10 @@
     font-weight: 700;
     text-decoration: none;
   }
-
   .top-nav-l > a.active{
     color: rgb(90, 195, 90);
   }
-
+  
   /*if under screen size: */
   @media screen and (max-width: 750px) {
     .bottom-nav-l {text-align: center; bottom: 4%; height: 10%}
@@ -68,113 +81,158 @@
   }
 
   /*^^^^^^^^^^^^^^^^^^^ NAV STYLING ^^^^^^^^^^^^^^^^^^^^*/
+  .search-match-div {
+    width: 95%;
+    max-width: 1300px;
+    position: fixed;
+    text-align: center;
+    top: 8%;
+    left: 1%;
+    height: 5%;
+  }
+  
+  .src-bar {
+    position: relative;
+    text-align: left;
+    font-size: 12px;
+    bottom: 50%;
+    height: 50%;
+    top: 1%;
+    left: 2%;
+    width: 68%;
+    border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
+  }
+  .fa-search{
+    font-size: 250%; 
+    padding-bottom: 1%;
+    color: rgba(128, 128, 128, 0.527);
+  }
+  .bestmatch {
+    position: relative;
+    text-align: left;
+    float: right;
+    font-size: 12px;
+    bottom: 50%;
+    height: 50%;
+    width: 25%;
+    border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
+  }
+  .fa-angle-down{
+    position: relative;
+    font-size: 150%;
+    padding-top: 1%; 
+    float: right;
+    color: grey;
+  }
 
-.search-match-div {
-  position: fixed;
-  text-align: center;
-  top: 8%;
-  left: 4%;
-  width: 92%;
-  height: 5%;
-}
-
-.src-bar {
-  position: relative;
-  text-align: left;
-  top: 1%;
-  left: 2%;
-  width: 68%;
-  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
-}
-.fa-search{
-  font-size: 250%; 
-  padding-bottom: 1%;
-  color: rgba(128, 128, 128, 0.527);
-}
-.bestmatch {
-  position: relative;
-  text-align: left;
-  font-size: 12px;
-  bottom: 45%;
-  height: 50%;
-  left: 74%;
-  width: 25%;
-  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
-}
-.fa-angle-down{
-  position: relative;
-  font-size: 150%;
-  padding-top: 1%; 
-  float: right;
-  color: grey;
-}
 
 .img-div{
-  background-image: url(./pix/sofa.png);
-  background-repeat: repeat;
-  background-color: #8c8061;
-  background-position: center; 
-  background-size: cover;
-  min-width: 95%;
-  min-height: auto;
-  top: 16%;
-  height: 60%;
-  left: 2.5%;
+  display: block;
   position: fixed;
+  width: 95%;
+  height: auto;
+  max-width: 1300px;
+  top: 16%;
+  left: 2.5%;;
   text-align: center;
 }
+.image{
+  position: relative;
+  width: 1300px;
+  max-width: 100%;
+  height: auto;
+}
+.slideshow-container {
+  position: relative;
+  width: 1300px;
+  max-width: 100%;
+  height: auto;
+}
+.mySlides {
+display: none;
+}
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+margin-top: -22px;
+padding: 1px;
+color: white;
+font-size: 30px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+background-color: rgba(206, 206, 206, 0.26);
+}
+.next {
+right: 0;
+}
+.prev{
+left:0;
+}
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 2s;
+animation-name: fade;
+animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
 
+
+.overlay{
+  height: auto;
+  position: absolute;
+  text-align: left;
+  top: 8%;
+  left: 7%;
+}
 .create{
   color: #FFFFFF;
   text-shadow: rgb(98, 98, 98) 0px 0px 5px;
-
-  font-weight: bolder;
-  font-size: 300%;
-  position: relative;
-  text-align: left;
-  top: 8%;
-  left: 4%;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 60px;
 }
 .relax{
   color: #FFFFFF;
   text-shadow: rgb(98, 98, 98) 0px 0px 5px;
   font-style: normal;
-  font-size: 120%;
-  position: relative;
-  text-align: left;
-  top: 4%;
-  left: 5%;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  position: absolute;
+  top: 70%;
   text-decoration: underline;
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bottom-nav-l {
-  min-width: 98%;
-  position: fixed;
-  text-align: center;
-  bottom: 10%;
+  position: relative;
+  width: 1200px;
+  height: 50%;
+  max-width: 100%;
   padding: 1%;
+  text-align: center;
+  padding-top: 15%;
+
 }
 /*bottom menu styles*/
 .bottom-nav-l  > a, .bottom-nav-l > div{
+
   display:inline;
   color: black;
   text-align: center;
   padding: 2%;
-  font-size: 80%;
+  font-size: 50%;
   font-weight: 700;
   text-decoration: none;
 }
@@ -186,8 +244,3 @@
   font-size: 150%;
   font-weight: 700;
 }
-
-
-
-
-

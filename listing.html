@@ -7,24 +7,22 @@
   <link rel="stylesheet" href="listing.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Shop/Listing</title>
-  <script src="products.js"></script>
-  <script src="listing.js"></script>
-
 </head>
-
 
 <body class="body">
   <!----vvvv  --NAV MENU TOP-- vvv----->
-  <main class="body-main">
-    <div class="top-nav-l">
-      <i class="fa fa-bars"></i>
-      <a class="title" href="main.html">HOME</a>
-      <a class="title active" href="listing.html">SHOP</a>
-      <a class="title" disabled="true">MAGAZINE</a>
-    </div>
-    <div class="top-nav-r">
-      <i class="fa fa-shopping-cart"></i>
-      <a class="login" disabled="true">LOGIN</a>
+  <div class="body-main">
+    <div class="top-nav">
+      <div class="top-nav-l">
+        <i class="fa fa-bars"></i>
+        <a class="title" href="main.html">HOME</a>
+        <a class="title active" href="listing.html">SHOP</a>
+        <a class="title" disabled="true">MAGAZINE</a>
+      </div>
+      <div class="top-nav-r">
+        <i class="fa fa-shopping-cart"></i>
+        <a class="login" disabled="true">LOGIN</a>
+      </div>
     </div>
     <!----^^^^^------ NAV END  ----^^^^------>
     <div class="search-match-div">
@@ -36,156 +34,222 @@
 
       <div class="filter-div">
         <div class="filter">FILTER BY</div>
-
-        <select class="category">
-          <option value="" disabled selected>Collection</option>
-        </select>
-
-        <select class="category">
-          <option value=""  selected>Colour</option>
-          <option value="Grey">Grey</option>
-          <option value="Brown">Brown</option>
-          <option value="Blue">Blue</option>
-          <option value="Beige">Beige</option>
-          <option value="Green">Green</option>
-          <option value="Red">Red</option>
-          <option value="Gold">Gold</option>
-        </select>
-
-        <select class="category">
-          <option value="" disabled selected>Category</option>
-          <option value="">dik</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-
-        <h3>Price Range</h3>
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
-          <p>$0 <span id="demo"></span></p>
-          <p>$10,000+ <span id="demo"></span></p>
+        <div class="collection">Collection<i class="fa fa-angle-down"></i></div>
+        <div class="colour">Colour<i class="fa fa-angle-down down"></i>
+          <div class="colours">
+            <label class="container">Yellow
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Ivory
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Grey
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Magenta
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Salmon
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Black
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Purple
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Green
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Orchid
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Red
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Violet
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
         </div>
 
+        <div class="category">Category<i class="fa fa-angle-down down2"></i>
+          <div class="categorys">
+            <label class="container chair">Chair
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container table">Table
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container bed">Bed
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container sofa">Sofa
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+
+        <h3>Price Range</h3>
+        <section class="slidecontainer">
+          <input value="0" min="0" max="10000" type="range" class="slider one">
+          <input value="10000" min="0" max="10000" type="range" class="slider two">
+          <p>$ <span class="price-range"></span></p>
+          <p>$ <span class="price-range"></span></p>
+        </section>
       </div>
 
       <div class="img-div">
-        <div class="top">
-          <div class="img1">
-            <div></div>
+        <!--IMG GALLERY START-->
+          <div class="gallery">
+              <img src="pix/2.png" alt="Sofa">
+              <div class="text-box">
+                <div class="name-type">
+                  <p>Ebba</p>
+                  <p>CHAIR</p>
+                </div>
+                <div class="price">
+                  <p value="270"> $270</p>
+                  <i class="fa fa-cart-plus"></i>
+                </div>
+              </div>
           </div>
-          <div class="img1-txt-box">
-            <div class="img1-txt">
-              <p>Druid</p>
-              <p>SOFA</p>
-            </div>
-            <div class="img1-price">
-              <p>$2,600</p>
-              <i class="fa fa-cart-plus"></i>
-            </div>
+          <div class="gallery">
+              <img src="pix/1.png" alt="Sofa">
+              <div class="text-box">
+                <div class="name-type">
+                  <p>Jules</p>
+                  <p>TABLE</p>
+                </div>
+                <div class="price">
+                  <p value="970">$970</p>
+                  <i class="fa fa-cart-plus"></i>
+                </div>
+              </div>
           </div>
-          <div class="img2">
-            <div></div>
+          <div class="gallery">
+              <img src="pix/3.png" alt="Sofa">
+              <div class="text-box">
+                <div class="name-type">
+                  <p>Melyssa</p>
+                  <p>BED</p>
+                </div>
+                <div class="price">
+                  <p>$350</p>
+                  <i class="fa fa-cart-plus"></i>
+                </div>
+              </div>
           </div>
-          <div class="img2-txt-box">
-            <div class="img2-txt">
-              <p>Corner</p>
-              <p>SOFA</p>
-            </div>
-            <div class="img2-price">
-              <p>$590</p>
-              <i class="fa fa-cart-plus"></i>
-            </div>
+          <div class="gallery">
+              <img src="pix/4.png" alt="Sofa">
+              <div class="text-box">
+                <div class="name-type">
+                  <p>Willard</p>
+                  <p>SOFA</p>
+                </div>
+                <div class="price">
+                  <p>$560</p>
+                  <i class="fa fa-cart-plus"></i>
+                </div>
+              </div>
           </div>
-          <div class="img3">
-            <div></div>
+          <div class="gallery">
+              <img src="pix/5.png" alt="Sofa">
+              <div class="text-box">
+                <div class="name-type">
+                  <p>Merritt</p>
+                  <p>BED</p>
+                </div>
+                <div class="price">
+                  <p>$850</p>
+                  <i class="fa fa-cart-plus"></i>
+                </div>
+              </div>
           </div>
-          <div class="img3-txt-box">
-            <div class="img3-txt">
-              <p>Celis</p>
-              <p>SOFA</p>
+          <div class="gallery">
+              <img src="pix/6.png" alt="Sofa">
+              <div class="text-box">
+                <div class="name-type">
+                  <p>Lincoln</p>
+                  <p>BED</p>
+                </div>
+                <div class="price">
+                  <p>$935</p>
+                  <i class="fa fa-cart-plus"></i>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!--IMG GALLERY END-->
+        <div class="base">
+          <div class="pg-nums">
+            <div class="num">
+              <a class="p-active" href="listing.html">1</a>
             </div>
-            <div class="img3-price">
-              <p>$950</p>
-              <i class="fa fa-cart-plus"></i>
+            <div class="num">
+              <a href="listing2.html">2</a>
+            </div>
+            <div class="num">
+              <a href="listing3.html">3</a>
+            </div>
+            <div class="num">
+              <a href="listing4.html">4</a>
+            </div>
+            <div class="num">
+              <a>5</a>
+            </div>
+            <div class="num">
+              <a>6</a>
+            </div>
+            <div class="num">
+              <a>7</a>
+            </div>
+            <div class="num">
+              <a>8</a>
+            </div>
+            <div class="num">
+              <a>9</a>
+            </div>
+            <div class="num">
+              <a>10</a>
+            </div>
+            <div class="num">
+              <a>></a>
             </div>
           </div>
         </div>
-        <div class="btm">
-          <div class="img4">
-            <div></div>
-          </div>
-          <div class="img4-txt-box">
-            <div class="img4-txt">
-              <p>Celis</p>
-              <p>SOFA</p>
-            </div>
-            <div class="img4-price">
-              <p>$890</p>
-              <i class="fa fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="img5">
-            <div></div>
-          </div>
-          <div class="img5-txt-box">
-            <div class="img5-txt">
-              <p>Yenings</p>
-              <p>SOFA</p>
-            </div>
-            <div class="img5-price">
-              <p>$120</p>
-              <i class="fa fa-cart-plus"></i>
-            </div>
-          </div>
-          <div class="img6">
-            <div></div>
-          </div>
-          <div class="img6-txt-box">
-            <div class="img6-txt">
-              <p>Allisonville</p>
-              <p>SOFA</p>
-            </div>
-            <div class="img6-price">
-              <p>$420</p>
-              <i class="fa fa-cart-plus"></i>
-            </div>
+        <!----vvv-- NAV MENU BOTTOM  --vvv------>
+        <div class="bottom-nav-l">
+          <a class="about" disabled="true">ABOUT US</a>
+          <a class="help" disabled="true">HOW CAN WE HELP</a>
+          <a class="room" disabled="true">SHOP BY ROOM</a>
+          <a class="style" disabled="true">SHOP BY STYLE</a>
+          <div>
+            <a class="fa fa-instagram"></a>
+            <a class="fa fa-facebook-f"></a>
+            <a class="fa fa-twitter"></a>
           </div>
         </div>
+        <!----^^^^^------ NAV END  ----^^^^------>
       </div>
     </div>
-
-    <div class="pg-nums">
-      <div class="num"><p class="p-active">1</p></div>
-      <div class="num"><p>2</p></div>
-      <div class="num"><p>3</p></div>
-      <div class="num"><p>4</p></div>
-      <div class="num"><p>5</p></div>
-      <div class="num"><p>6</p></div>
-      <div class="num"><p>7</p></div>
-      <div class="num"><p>8</p></div>
-      <div class="num"><p>9</p></div>
-      <div class="num"><p>10</p></div>
-      <div class="num"><p>></p></div>
-    </div>
-    <!----vvv-- NAV MENU BOTTOM  --vvv------>
-    <div class="bottom-nav-l">
-      <a class="about" disabled="true">ABOUT US</a>
-      <a class="help" disabled="true">HOW CAN WE HELP</a>
-      <a class="room" disabled="true">SHOP BY ROOM</a>
-      <a class="style" disabled="true">SHOP BY STYLE</a>
-      <div>
-        <a class="fa fa-instagram"></a>
-        <a class="fa fa-facebook-f"></a>
-        <a class="fa fa-twitter"></a>
-      </div>
-    </div>
-    <!----^^^^^------ NAV END  ----^^^^------>
-  </main>
-  </div>
+  <script src="products.js"></script>
+  <script src="listing.js"></script>
 </body>
 
 

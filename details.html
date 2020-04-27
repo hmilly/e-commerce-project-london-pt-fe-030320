@@ -7,87 +7,111 @@
   <link rel="stylesheet" href="details.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Shop/Listing</title>
-  <script src="details.js"></script>
-  <script src="listing.js"></script>
-
 </head>
-
 
 <body class="body">
   <!----vvvv  --NAV MENU TOP-- vvv----->
   <main class="body-main">
-    <div class="top-nav-l">
-      <i class="fa fa-bars"></i>
-      <a class="title" href="main.html">HOME</a>
-      <a class="title" href="listing.html">SHOP</a>
-      <a class="title" disabled="true">MAGAZINE</a>
-    </div>
-    <div class="top-nav-r">
-      <i class="fa fa-shopping-cart"></i>
-      <a class="login" disabled="true">LOGIN</a>
+    <div class="top-nav">
+      <div class="top-nav-l">
+        <i class="fa fa-bars"></i>
+        <a class="title" href="main.html">HOME</a>
+        <a class="title" href="listing.html">SHOP</a>
+        <a class="title" disabled="true">MAGAZINE</a>
+      </div>
+      <div class="top-nav-r">
+        <i class="fa fa-shopping-cart"></i>
+        <a class="login" disabled="true">LOGIN</a>
+      </div>
     </div>
     <!----^^^^^------ NAV END  ----^^^^------>
-
-
     <div class="img-div">
-      <img class="image" src="pix\Chair.png" alt="Picture of a sofa">
-
-      <div class="info">
-        <h2>Branagh</h2>
-        <p class="txt">branagh left hand facing chaise end
-          corner sofa, electric blue velvet</p>
-        <p>$90</p>
-        <p class="txt">DISPATCHED IN 2-3 WEEKS
-          ONLY</p>
-          <p class="red">4 left</p>
-        
-        <div class="colours">
-          <div class="grey"></div>
-          <div class="black"></div>
-          <div class="gold"></div>
-          <div class="blue"></div>
+      <div class="top">
+        <div class="images">
+          <div class="image1">
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <img class="image" src="pix\Chair.png" alt="Picture of a sofa">
+              </div>
+              <div class="mySlides fade">
+                <img class="image" src="pix\Chair.2.png" alt="Picture of a sofa">
+              </div>
+              <div class="mySlides fade">
+                <img class="image" src="pix\Chair.3.png" alt="Picture of a sofa">
+              </div>
+              <div class="mySlides fade">
+                <img class="image" src="pix\Chair.4.png" alt="Picture of a sofa">
+              </div>
+            </div>
+          </div>
+          <div class="thumbnails">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="pix">
+              <img src="pix\chair1.png" alt="chair">
+              <img src="pix\chair2.png" alt="chair">
+              <img src="pix\chair3.png" alt="chair">
+              <img src="pix\chair4.png" alt="chair">
+            </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
         </div>
+        <div class="info">
+          <h3>Branagh</h3>
+
+          <p>branagh left hand facing chaise end
+            corner sofa, electric blue velvet</p>
+
+          <h4>$90</h4>
+
+          <div class="dispatch">
+            <p>DISPATCHED IN 2-3 WEEKS
+              ONLY <p class="red">4 left</p>
+            </p>
+          </div>
+
+          <div class="colours">
+            <div><button class="grey"></button></div>
+            <div><button class="black"></button></div>
+            <div><button class="gold"></button></div>
+            <div><button class="blue"></button></div>
+          </div>
+
+          <button class="add">ADD TO BASKET</button>
+
+          <div class="deats">
+            <p>DETAILS</p><i class="fa fa-angle-down"></i>
+            <div class="deat">
+              <div>- Dimensions: <span class="dimensions">W: 267 cm D: 102-421 cm H: 82 cm</span></div>
+              <div>- Seat dimensions: <span class="seatdi">W: 217 cm D: 83 cm H: 43 cm</span></div>
+              <div>- Weight: <span class="weight">145kg</span></div>
+              <div>- Materials: <span class="mats">pine and engineered wood frame, beech, plinth</span></div>
+              <div>- Filling: <span class="filling">feather and fibre mix in black, coil springs and feathers in seat</span></div>
+              <div>- Comfort: <span class="comfort">soft</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+
+        <!----vvv-- NAV MENU BOTTOM  --vvv------>
+        <div class="bottom-nav-l">
+          <a class="about" disabled="true">ABOUT US</a>
+          <a class="help" disabled="true">HOW CAN WE HELP</a>
+          <a class="room" disabled="true">SHOP BY ROOM</a>
+          <a class="style" disabled="true">SHOP BY STYLE</a>
+          <div>
+            <a class="fa fa-instagram"></a>
+            <a class="fa fa-facebook-f"></a>
+            <a class="fa fa-twitter"></a>
+          </div>
+        </div>
+        <!----^^^^^------ NAV END  ----^^^^------>
 
       </div>
-
-
     </div>
-    <div class="thumbnails">t</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!----vvv-- NAV MENU BOTTOM  --vvv------>
-    <div class="bottom-nav-l">
-      <a class="about" disabled="true">ABOUT US</a>
-      <a class="help" disabled="true">HOW CAN WE HELP</a>
-      <a class="room" disabled="true">SHOP BY ROOM</a>
-      <a class="style" disabled="true">SHOP BY STYLE</a>
-      <div>
-        <a class="fa fa-instagram"></a>
-        <a class="fa fa-facebook-f"></a>
-        <a class="fa fa-twitter"></a>
-      </div>
-    </div>
-    <!----^^^^^------ NAV END  ----^^^^------>
   </main>
-  </div>
+  <script src="details.js"></script>
+  <script src="products.js"></script>
 </body>
 
 
