@@ -1,3 +1,5 @@
+
+
 // Slider functionality //
 function getVals() {
   var parent = this.parentNode;
@@ -26,20 +28,47 @@ window.onload = function () {
 }
 
 
-// colourDiv functionality //
-let colourDiv = document.querySelector(".colour")
-let coloursDiv = document.querySelector(".colours")
-let angle = document.querySelector(".down")
+//when showing under 414px ,click angle to open up filters menu
+let mediaAngle = document.querySelector(".fdown")
+let collection = document.querySelector(".collection");
+let colour = document.querySelector(".colour");
+let h3 = document.querySelector("h3");
+let slide = document.querySelector(".slidecontainer");
 
-colourDiv.addEventListener("click", () => {
+mediaAngle.addEventListener("click", () => {
+  console.log("click")
+  if (slide.style.display === "none") {
+    collection.style.display = "block";
+    colour.style.display = "block";
+    category.style.display = "block";
+    h3.style.display = "block";
+    slide.style.display = "block";
+  } else {
+    collection.style.display = "none";
+    colour.style.display = "none";
+    category.style.display = "none";
+    h3.style.display = "none";
+    slide.style.display = "none";
+  }
+});
+
+
+
+
+// colourDiv functionality //
+let coloursDiv = document.querySelector(".colours");
+let angle = document.querySelector(".down");
+
+colour.addEventListener("click", () => {
   if (coloursDiv.style.display === "none") {
     coloursDiv.style.display = "block";
-    angle.className = "fa fa-angle-up down"
+    angle.className = "fa fa-angle-up down";
   } else {
     coloursDiv.style.display = "none";
-    angle.className = "fa fa-angle-down down"
+    angle.className = "fa fa-angle-down down";
   }
-})
+});
+
 
 // category functionality //
 let category = document.querySelector(".category")
@@ -58,40 +87,70 @@ category.addEventListener("click", () => {
 
 
 
-let galleryItem = document.querySelectorAll(".gallery")
-let ifchecked = document.querySelectorAll("input[type=checkbox]")
-
-ifchecked.forEach(tick => {
-  tick.addEventListener("change", () => {
-    galleryItem.forEach(imageDiv => {
-
-      let name = imageDiv.querySelectorAll("p")[0].innerText
-      let type = imageDiv.querySelectorAll("p")[1].innerText.toLowerCase()
-      let price = imageDiv.querySelectorAll("p")[2].innerText
-
-      
-      console.log(`container ${type}`)
-      console.log(tick.parentElement.className)
-      console.log(imageDiv)
-
-      let cont = []
-    if(tick.checked && `container ${type}` !== tick.parentElement.className) {
-      imageDiv.style.display = "none";
-    } else {
-      imageDiv.style.display = "block";
-    }
-
-    })
-  })
+// working here on how to display gallery items selected in the listings (colour/price/type)
+let galleryItem = document.querySelectorAll(".gallery");
+galleryItem.forEach((imageDiv) => {
+  let type = imageDiv.querySelectorAll("p")[1].innerText.toLowerCase();
 })
 
 
+let ifchecked = document.querySelectorAll("input[type=checkbox]");
+ifchecked.forEach(tick => {
+  tick.addEventListener("change", () => {
 
 
+    let item = document.querySelectorAll(".name-type p:nth-child(2)")
+
+    console.log(tick.className)
+    console.log(tick.checked)
+
+
+    console.log(tick.parentElement)
+
+    if (item.forEach(x => x.innerText === tick.className && tick.checked === true)) {
+      console.log(tick)
+      console.log("hi")
+      console.log(tick.className)
+
+    }
+  });
+});
+
+
+
+
+// who knows what the hell is going on here, I'm tired.
+var low = document.querySelector(".one")
+var high = document.querySelector(".two")
+
+let price = [];
+
+
+   
+low.addEventListener("change", (l) => {
+ 
+    if (price.forEach(i => i <= l)) {
+      console.log(i)
+  }})
+
+
+high.addEventListener("change", (h) => {
+
+  if (price.forEach(i => i >= h)) {
+    console.log(i)
+    
+    }})
+
+
+
+
+
+
+// arrays of items from products doc
 
 let name = [];
 let type = [];
-let price = [];
+
 let colors = [];
 let materials = [];
 let filling_materials = [];
@@ -125,7 +184,6 @@ let unique = [...new Set(cul)];
 let unique2 = [...new Set(type)];
 
 
-console.log(unique2)
 /*
 - Color, category and price range filters must update the list of products in real time
 
@@ -137,9 +195,6 @@ console.log(unique2)
 */
 
 
-
-
-console.log(name)
 
 
 

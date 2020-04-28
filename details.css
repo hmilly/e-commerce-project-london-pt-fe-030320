@@ -1,91 +1,73 @@
-
-  @font-face {
-    font-family: "aventir";
-    src: url(./pix/aventir/AvenirLTStd-Medium.otf);
-  }
-
-*{
-    box-sizing: border-box;
-    font-family: "aventir", Times, serif;
-  }
-
-  /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
-  /*navigation bars position for each one */
-  .body-main{
-    width: 98%;
-    height: 98%;
-    margin: 0 auto;
-    max-width: 1400px;
-    max-height: 1400px;
-  }
-  
-  .top-nav{
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 1%;
-  }
-
-  .top-nav-l{
-    width:75%;
-    max-width: 1000px;
-    float: left;
-    padding: 1%;
-  }
-
-  .top-nav-l > i {
-    font-size: 120%;
-    padding-right: 3%; 
-  }
-
-  .top-nav-r{
-    width: 25%;
-    max-width: 200px;
-    text-align: right;
-    float: right;
-    padding: 1%;
-  }
-
-  .top-nav-r > i{
-    font-size: 120%;
-    text-align: left;
-    padding-right: 10%;
-    color: black;
-  }
-  
-
-  /*top nav menu styles*/
-  .top-nav-l > a, .top-nav-r > a {
-    display:inline;
-    color: black;
-    text-align: center;
-    padding: 1.5%;
-    font-size: 12px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  /*if under screen size: */
-  @media screen and (max-width: 750px) {
-    .bottom-nav-l {text-align: center; bottom: 4%; height: 10%}
-    .bottom-nav-l  > a {font-size: 80%; padding: 2%;}
-    .bottom-nav-l > div > a  {font-size: 150%; padding: 2%}
-    .bottom-nav-l > div {display:block; padding: 0;}
-  }
-  
-  @media screen and (max-width: 450px) {
-    .top-nav-l {width: 100%}
-    .top-nav-r {top: 4%; width: 26%; left: 74%}
-    .top-nav-l > a, .top-nav-r > a  {font-size: 80%; padding: 3%;}
-  }
-
-
+@font-face {
+  font-family: "aventir";
+  src: url(./pix/aventir/AvenirLTStd-Medium.otf);
+}
+ 
+* {
+  box-sizing: border-box;
+  font-family: "aventir", Times, serif;
+}
+ 
+/*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
+/*navigation bars position for each one */
+.body {
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  max-height: 1200px;
+  margin: 0 auto;
+}
+ 
+.top-nav {
+  width: 100%;
+  max-width: 1200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1%;
+}
+ 
+.top-nav-l {
+  width: 75%;
+  max-width: 1000px;
+  float: left;
+  padding: 1%;
+}
+ 
+.top-nav-l > i {
+  font-size: 120%;
+  padding-right: 3%;
+}
+ 
+.top-nav-r {
+  width: 25%;
+  max-width: 200px;
+  text-align: right;
+  float: right;
+  padding: 1%;
+}
+ 
+.top-nav-r > i {
+  font-size: 120%;
+  text-align: left;
+  padding-right: 10%;
+  color: black;
+}
+ 
+/*top nav menu styles*/
+.top-nav-l > a,
+.top-nav-r > a {
+  display: inline;
+  color: black;
+  text-align: center;
+  padding: 1.5%;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
 /*-----------main container  -----------*/
-
-.img-div{
+ 
+.img-div {
   top: 15%;
   width: 85%;
   height: 80%;
@@ -95,7 +77,7 @@
   position: fixed;
   text-align: center;
 }
-.top{
+.top {
   width: 100%;
   height: 66%;
   max-height: 542px;
@@ -103,20 +85,20 @@
   position: relative;
   text-align: center;
 }
-.images{
+.images {
   float: left;
   width: 70%;
   max-width: 707px;
   height: auto;
 }
-
-.image1{
+ 
+.image1 {
   width: 100%;
   max-width: 845px;
   height: auto;
 }
-
-.image{
+ 
+.image {
   width: 100%;
   max-width: 845px;
   height: auto;
@@ -128,34 +110,42 @@
   height: auto;
 }
 .mySlides {
-display: none;
+  display: none;
 }
-
+ 
 .fade {
--webkit-animation-name: fade;
--webkit-animation-duration: 2s;
-animation-name: fade;
-animation-duration: 2s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
 }
 @-webkit-keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-.thumbnails{
-  display: relative;
+ 
+.thumbnails {
   width: 70%;
   max-width: 633px;
   padding-top: 3%;
   height: 20%;
   text-align: center;
 }
-
-.prev, .next {
+ 
+.prev,
+.next {
   cursor: pointer;
   color: black;
   transition: 0.6s ease;
@@ -163,123 +153,124 @@ to {opacity: 1}
   user-select: none;
   background-color: white;
   padding-top: 2%;
-  width:4%;
+  width: 4%;
   height: 100%;
   font-size: 30px;
-  }
-
-.prev:hover, .next:hover {
+}
+ 
+.prev:hover,
+.next:hover {
   color: grey;
 }
-
-.prev{
+ 
+.prev {
   float: left;
 }
-.next{
+.next {
   float: right;
 }
-
-.pix{
+ 
+.pix {
   float: left;
   width: 92%;
   height: 100%;
   text-align: center;
 }
-
-.pix > img{
+ 
+.pix > img {
   float: left;
   width: 150px;
   height: auto;
   padding: 1%;
   max-width: 25%;
 }
-
-.info{
+ 
+.info {
   float: right;
   width: 30%;
   height: 100%;
 }
-
-.info> *{
+ 
+.info > * {
   text-align: left;
   margin-top: -1.5%;
   margin-left: 3%;
   width: 95%;
   padding: 2%;
 }
-
-.info>p{
+ 
+.info > p {
   font-size: 12px;
   margin-top: -5%;
 }
-
-.dispatch{
+ 
+.dispatch {
   display: block;
   font-size: 12px;
   margin-top: -5%;
 }
-.dispatch >p{
+.dispatch > p {
   display: inline;
 }
-.red{
+.red {
   color: red;
 }
-.colours, .add{
+.colours,
+.add {
   display: block;
   height: 15%;
   margin-left: 3%;
   text-align: center;
 }
-
-.colours > div{
+ 
+.colours > div {
   float: left;
   margin-top: 3%;
   margin-right: 4%;
   width: 30px;
   height: 30px;
 }
-.grey{
+.grey {
   background-color: grey;
   border-radius: 50%;
-  height:100%;
+  height: 100%;
   width: 100%;
   border: black solid 1px;
 }
-.black{
+.black {
   background-color: black;
   border-radius: 50%;
-  height:100%;
+  height: 100%;
   width: 100%;
 }
-.gold{
+.gold {
   background-color: darkgoldenrod;
   border-radius: 50%;
-  height:100%;
+  height: 100%;
   width: 100%;
 }
-.blue{
+.blue {
   background-color: blue;
   border-radius: 50%;
-  height:100%;
+  height: 100%;
   width: 100%;
 }
-
-.add{
+ 
+.add {
   background-color: black;
   color: white;
   height: 9%;
   width: 95%;
 }
-
-
-.deats{
+ 
+.deats {
   border: black solid 1px;
   margin-top: 5px;
   height: 9%;
   width: 95%;
 }
-
-.deats >p{
+ 
+.deats > p {
   float: left;
   width: 60%;
   height: 100%;
@@ -288,8 +279,8 @@ to {opacity: 1}
   margin-top: 0;
   font-size: 15px;
 }
-
-.deats > i{
+ 
+.deats > i {
   float: right;
   font-size: 30px;
   size: 20%;
@@ -297,21 +288,21 @@ to {opacity: 1}
   width: 20%;
   text-align: center;
 }
-
-.deat{
+ 
+.deat {
   display: none;
   margin-top: 50px;
   width: 100%;
   height: 900px;
 }
-.deat>*{
+.deat > * {
   width: 100%;
   text-align: left;
   font-size: 10px;
   padding: 1%;
 }
-
-.bottom{
+ 
+.bottom {
   position: relative;
   width: 100%;
   height: 20%;
@@ -320,7 +311,7 @@ to {opacity: 1}
   max-width: 1200px;
   text-align: center;
 }
-
+ 
 .bottom-nav-l {
   width: 100%;
   height: 80%;
@@ -329,9 +320,10 @@ to {opacity: 1}
   text-align: center;
   border-top: rgb(207, 207, 207) solid 1px;
 }
-
+ 
 /*bottom menu styles*/
-.bottom-nav-l  > a, .bottom-nav-l > div{
+.bottom-nav-l > a,
+.bottom-nav-l > div {
   color: black;
   text-align: center;
   width: 20%;
@@ -340,18 +332,73 @@ to {opacity: 1}
   font-size: 50%;
   font-weight: 700;
   text-decoration: none;
-
 }
-
+ 
 /*media div styles*/
-.bottom-nav-l > div > a{
+.bottom-nav-l > div > a {
   color: black;
   text-align: right;
   width: 30%;
   font-size: 150%;
   font-weight: 700;
-
 }
-
-
-
+ 
+/* if under screen size: */
+@media screen and (max-width: 414px) {
+  .top-nav-l > a,
+  .bestmatch,
+  .top-nav-r > a {
+    display: none;
+  }
+ 
+  .top-nav-l > i {
+    margin-left: 120%;
+    font-size: 200%;
+    font-weight: 100;
+    margin-top: 7%;
+  }
+  .top-nav-r > i {
+    padding-right: 120%;
+    font-size: 200%;
+    margin-top: 20%;
+  }
+  .thumbnails {
+    display: none;
+  }
+ 
+  .img-div {
+    display: block;
+    height: 800px;
+  }
+  .top {
+    display: block;
+  }
+  .images1,
+  .slideshow-container,
+  .mySlides {
+    display: block;
+    margin-left: -40%;
+    margin-top: -25%;
+    width: 700px;
+  }
+ 
+  .info {
+    display: absolute;
+    width: 90%;
+    margin-top: 10%;
+    margin-right: 5%;
+  }
+ 
+  .bottom {
+    display: block;
+  }
+ 
+  a.next,
+  a.prev {
+    display: none;
+  }
+ 
+  .bottom {
+    display: none;
+  }
+}

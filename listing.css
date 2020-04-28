@@ -1,4 +1,4 @@
-
+ 
   @font-face {
     font-family: "aventir";
     src: url(./pix/aventir/AvenirLTStd-Medium.otf);
@@ -7,18 +7,18 @@
     box-sizing: border-box;
     font-family: "aventir", Times, serif;
   }
-
+ 
   /*vvvvvvvvvvvvvvvvvvv NAV STYLING vvvvvvvvvvvvvvvvvvvvvvvvvv*/
   /*navigation bars position for each one */
-
-  .body-main{
-    width: 98%;
-    height: 98%;
-    margin: 0 auto;
+ 
+  .body{
+    width: 100%;
+    height: 100%;
     max-width: 1400px;
-    max-height: 1400px;
+    max-height: 1200px;
+    margin: 0 auto;
   }
-
+ 
   .top-nav{
     position: relative;
     width: 100%;
@@ -28,19 +28,19 @@
     left: 0;
     padding: 1%;
   }
-
+ 
   .top-nav-l{
     width:75%;
     max-width: 1000px;
     float: left;
     padding: 1%;
   }
-
+ 
   .top-nav-l > i {
     font-size: 120%;
     padding-right: 3%; 
   }
-
+ 
   .top-nav-r{
     width: 25%;
     max-width: 200px;
@@ -48,14 +48,14 @@
     float: right;
     padding: 1%;
   }
-
+ 
   .top-nav-r > i{
     font-size: 120%;
     text-align: left;
     padding-right: 10%;
     color: black;
   }
-
+ 
   /*top nav menu styles*/
   .top-nav-l > a, .top-nav-r > a {
     display:inline;
@@ -66,26 +66,11 @@
     font-weight: 700;
     text-decoration: none;
   }
-
+ 
   .top-nav-l > a.active{
     color: rgb(90, 195, 90);
   }
-  
-  /*if under screen size: */
-  @media screen and (max-width: 750px) {
-    .bottom-nav-l {text-align: center; bottom: 4%; height: 10%}
-    .bottom-nav-l  > a {font-size: 80%; padding: 2%;}
-    .bottom-nav-l > div > a  {font-size: 150%; padding: 2%}
-    .bottom-nav-l > div {display:block; padding: 0;}
-  }
-  
-  @media screen and (max-width: 450px) {
-    .top-nav-l {width: 100%}
-    .top-nav-r {top: 4%; width: 26%; left: 74%}
-    .top-nav-l > a, .top-nav-r > a  {font-size: 80%; padding: 3%;}
-  }
-
-  /*-----------best match line -----------*/
+   /*-----------best match line -----------*/
 .search-match-div {
   width: 95%;
   max-width: 1300px;
@@ -95,7 +80,9 @@
   left: 1%;
   height: 5%;
 }
-  
+.src{
+  display: none;
+}
 .src-bar {
   position: relative;
   text-align: left;
@@ -129,7 +116,7 @@
   float: right;
   color: grey;
 }
-
+ 
 /*-----------main container  -----------*/
 .filter-img-div{
   width: 95%;
@@ -142,14 +129,14 @@
   position: fixed;
   text-align: center;
 }
-
+ 
 /*----------- filter LIST stylings -----------*/
 .filter-div{
   height: 100%;
   float: left;
   width: 22%;
 }
-
+ 
 .filter{
   display: block;
   position: relative;
@@ -159,6 +146,9 @@
   padding-bottom: 10%;
   padding-top: 4%;
   color:  rgba(179, 179, 179, 0.527);
+}
+i.fa.fa-angle-down.fdown{
+  display: none;
 }
  /*----------- SELECT stylings -----------*/
 .collection, .colour, .category{
@@ -193,7 +183,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-
+ 
 .container input {
   position: absolute;
   opacity: 0;
@@ -201,7 +191,7 @@
   height: 0;
   width: 0;
 }
-
+ 
 .checkmark {
   position: absolute;
   top: 0;
@@ -212,21 +202,21 @@
   border-radius: 30%;
   border: grey solid 1px;
 }
-
+ 
 .container input:checked ~ .checkmark {
   background-color: rgb(90, 195, 90);;
 }
-
+ 
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
+ 
 .container input:checked ~ .checkmark:after {
   display: block;
 }
-
+ 
 .container .checkmark:after {
   left: 3px;
   width: 5px;
@@ -238,14 +228,14 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
+ 
 h3{
   text-align: left;
   font-size: 12px;
   padding-top: 4%;
 }
-
-
+ 
+ 
 .slidecontainer {
   position: relative;
   width: 90%;
@@ -253,7 +243,7 @@ h3{
   padding: 1%;
   text-align: center;
 }
-
+ 
 .slider {
   -webkit-appearance: none;
   position: absolute;
@@ -264,7 +254,7 @@ h3{
   left: 0;
   top: 10px;
 }
-
+ 
 .slider::-webkit-slider-thumb{
   -webkit-appearance: none;
   width: 15px;
@@ -274,8 +264,8 @@ h3{
   border: grey solid 1px;
   cursor: pointer;
 }
-
-
+ 
+ 
 .slidecontainer > :nth-child(3){
   font-size: 10px;
   padding-top: 20px;
@@ -287,7 +277,7 @@ h3{
   float: right;
   padding-top: 20px;
 }
-
+ 
 .slidecontainer input::-webkit-slider-thumb {
     pointer-events: all;
     position: relative;
@@ -301,7 +291,7 @@ h3{
     -moz-appearance: none;
     width: 20px;
 }
-
+ 
  /*-----------IMG GALLERY START BOX positions -----------*/
 .img-div{
   height: 100%;
@@ -318,7 +308,7 @@ h3{
   width: 90%;
   height: auto;
 }
-
+ 
 .text-box {
   display: block;
   position: relative;
@@ -343,7 +333,7 @@ h3{
   font-style: normal;
   font-weight: normal;
 }
-
+ 
 .price {
   width: 25%;
   height: 60%;
@@ -358,7 +348,7 @@ h3{
   margin-top: -2%;
   font-size: 20px;
 }
-
+ 
  /*-----------IMG GALLERY END BOX positions -----------*/
  .base{
   height: 10%;
@@ -367,7 +357,7 @@ h3{
   padding-left: 22%;
   width: 100%;
 }
-
+ 
 .pg-nums{
   width: 85%;
   max-width: 900px;
@@ -387,12 +377,12 @@ h3{
   padding: 14% 20%;
   text-decoration: none;
 }
-
+ 
 .p-active{
   background-color: rgb(90, 195, 90);
   border-radius: 5%;
 }
-
+ 
 .bottom-nav-l {
   position: relative;
   float: right;
@@ -405,7 +395,7 @@ h3{
   margin-top: 5%;
   border-top: rgb(207, 207, 207) solid 1px;
 }
-
+ 
 /*bottom menu styles*/
 .bottom-nav-l  > a, .bottom-nav-l > div{
   color: black;
@@ -417,7 +407,7 @@ h3{
   font-weight: 700;
   text-decoration: none;
 }
-
+ 
 /*media div styles*/
 .bottom-nav-l > div > a{
   color: black;
@@ -426,11 +416,132 @@ h3{
   font-size: 150%;
   font-weight: 700;
 }
+ 
+/* if under screen size: */
+@media screen and (max-width: 414px) {
+.body-main{
+  overflow: scroll;
+}
+  .top-nav-l > a,
+  .top-nav-r > a {
+    display: none;
+  }
+  .search-match-div, .filter-img-div, .img-div{
+    display:block;
+    width: 370px;
+    height: auto;
+    left: 5%;
+  }
+  .src-bar {
+  display: none;
+  }
+  .src{
+  display: block;
+  text-align: left;
+  font-size:25px;
+  border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
+  }
+  .bestmatch{
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 10%;
+  font-size: 20px;
+  }
+ 
+  .filter-img-div{
+    margin-top: -12%;
+  }
+  .filter-div{
+    float:top;
+    display: block;
+    width: 370px;
+    margin-top: 40px;
+    border-bottom:  rgba(128, 128, 128, 0.527) solid 1px;
+  }
+  .filter{
+    color: black;
+    width: 400px;
+    visibility: hidden;  
+  }
+  .filter:after{
+    visibility: visible;
+    position: absolute;
+    font-size: 25px;
+    left: 0;
+    content: "Filters";
+    height: 2%;
+  }
+  i.fa.fa-angle-down.fdown{
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 98%;
+    top: 18%;
+  }
+.collection, .colour, .category, h3, .slidecontainer{
+  display: none;
+}
+  .img-div{
+    float:bottom;
+  }
+   .gallery {
+    float: left;
+    width: 93%;
+    padding: 1%;
+    margin-top: 40px;
+  }
+  .price, .fa-cart-plus{
+    font-size: 20px;
+  }
+ 
+  .base{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 424px;
+    background-color: white;
+  }
+.pg-nums{
+  width: 300%;
+  left: -20%;
+  padding: 1%;
+}
+ 
+.p-active{
+  font: white;
+ 
+}
+.five::before{
+  content: ">";
+  font-size: 140%;
+  color: black
+}
+ 
+.num >a{
+  font-size: 120%;
+  color: black;
+}
+a.p-active{
+  color: white;
+  background-color: black;
+}
+ 
+  .top-nav-l > i {
+    margin-left: 120%;
+    font-size: 200%;
+    font-weight: 100;
+    margin-top: 7%;
+  }
+  .top-nav-r > i {
+    padding-right: 120%;
+    font-size: 200%;
+    margin-top: 20%;
+  }
 
-
-
-
-
-
-
+  .bottom-nav-l {
+    display: none;
+  }
+ 
+}
 
