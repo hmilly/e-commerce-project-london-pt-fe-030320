@@ -1,5 +1,3 @@
-
-
 // Slider functionality //
 function getVals() {
   var parent = this.parentNode;
@@ -27,7 +25,6 @@ window.onload = function () {
   }
 }
 
-
 //when showing under 414px ,click angle to open up filters menu
 let mediaAngle = document.querySelector(".fdown")
 let collection = document.querySelector(".collection");
@@ -52,9 +49,6 @@ mediaAngle.addEventListener("click", () => {
   }
 });
 
-
-
-
 // colourDiv functionality //
 let coloursDiv = document.querySelector(".colours");
 let angle = document.querySelector(".down");
@@ -68,7 +62,6 @@ colour.addEventListener("click", () => {
     angle.className = "fa fa-angle-down down";
   }
 });
-
 
 // category functionality //
 let category = document.querySelector(".category")
@@ -86,35 +79,48 @@ category.addEventListener("click", () => {
 })
 
 
+// working here on how to display gallery items selected in the listings (type)
+let allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+let allCheckboxesArr = [];
+allCheckboxes.forEach(box => allCheckboxesArr.push(box))
 
-// working here on how to display gallery items selected in the listings (colour/price/type)
-let galleryItem = document.querySelectorAll(".gallery");
-galleryItem.forEach((imageDiv) => {
-  let type = imageDiv.querySelectorAll("p")[1].innerText.toLowerCase();
+let catArr = allCheckboxesArr.slice(11, 15)
+
+let secondPitemFromImg = document.querySelectorAll(".name-type p:nth-child(2)")
+
+secondPitemFromImg.forEach(tick => {
+  catArr[0].addEventListener("change", () => {
+    if (catArr[0].checked === true && tick.innerText !== "CHAIR") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
+    } else {
+      tick.parentElement.parentElement.parentElement.style.display = "block"
+    }
+  })
+  catArr[1].addEventListener("change", () => {
+    if (catArr[1].checked === true && tick.innerText !== "TABLE") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
+    } else {
+      tick.parentElement.parentElement.parentElement.style.display = "block"
+    }
+  })
+  catArr[2].addEventListener("change", () => {
+    if (catArr[2].checked === true && tick.innerText !== "BED") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
+    } else {
+      tick.parentElement.parentElement.parentElement.style.display = "block"
+    }
+  })
+  catArr[3].addEventListener("change", () => {
+    if (catArr[3].checked === true && tick.innerText !== "SOFA") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
+    } else {
+      tick.parentElement.parentElement.parentElement.style.display = "block"
+    }
+  })
 })
 
 
-let ifchecked = document.querySelectorAll("input[type=checkbox]");
-ifchecked.forEach(tick => {
-  tick.addEventListener("change", () => {
 
-
-    let item = document.querySelectorAll(".name-type p:nth-child(2)")
-
-    console.log(tick.className)
-    console.log(tick.checked)
-
-
-    console.log(tick.parentElement)
-
-    if (item.forEach(x => x.innerText === tick.className && tick.checked === true)) {
-      console.log(tick)
-      console.log("hi")
-      console.log(tick.className)
-
-    }
-  });
-});
 
 
 
@@ -122,25 +128,63 @@ ifchecked.forEach(tick => {
 // who knows what the hell is going on here, I'm tired.
 var low = document.querySelector(".one")
 var high = document.querySelector(".two")
-
 let price = [];
 
-
-   
 low.addEventListener("change", (l) => {
- 
-    if (price.forEach(i => i <= l)) {
-      console.log(i)
-  }})
 
+  if (price.forEach(i => i <= l)) {
+    console.log(i)
+  }
+})
 
 high.addEventListener("change", (h) => {
 
   if (price.forEach(i => i >= h)) {
     console.log(i)
-    
-    }})
 
+  }
+})
+
+
+
+
+
+// item splits to 6 over 4 pages but doesn't display properLy. No idea how to do this.
+let list_item = [];
+let galleryImage = document.querySelectorAll(".gallery")
+for (let i = 0; i < galleryImage.length; i++) {
+  list_item.push(galleryImage[i])
+}
+
+let list_element = document.getElementsByClassName("img-div")
+
+
+let pageDivs = []
+let pageNum = document.getElementsByClassName("page")
+for (let i = 0; i < pageNum.length; i++) {
+  pageDivs.push(pageNum[i])
+}
+
+let currentP = 1;
+let itemNums = 6;
+
+
+function displayList(items, wrapper, itemspp, page) {
+  wrapper.innerText = "";
+  page--;
+
+  //        20
+  let start = itemspp * page;
+  let end = start + itemspp;
+  let pagi = items.slice(start, end)
+
+  for (let i = 0; i < pagi.length; i++) {
+    console.log(pagi[i])
+  }
+}
+
+//             (20,       image_div,      6,        4)
+displayList(list_item, list_element, itemNums, currentP);
 
 
 
@@ -175,8 +219,6 @@ for (let i in PRODUCTS) {
 }
 
 
-
-
 let cul = [];
 colors.forEach(item => item.forEach(x => cul.push(x)))
 let unique = [...new Set(cul)];
@@ -184,23 +226,48 @@ let unique = [...new Set(cul)];
 let unique2 = [...new Set(type)];
 
 
-/*
-- Color, category and price range filters must update the list of products in real time
-
-- Products can be sorted three ways: Default, Price: highest first, Price: lowest first. Selecting a sort option must update the list of products in real time
-
-- Clicking the "Add to basket" button will update the cart icon in the top right of the page to show the number of products in the cart
-
-- Products in the cart are stored and remembered by the browser using localStorage
-*/
 
 
 
+// working here on how to display gallery items selected in the listings (type)
+let colourArr = allCheckboxesArr.slice(0, 11)
+
+console.log(colors)
+
+
+galleryImage.forEach(tick => {
+
+  colourArr[0].addEventListener("change", () => {
+    if (colourArr[0].checked === true ) {
+      tick.style.display = "none"
+    } else {
+      tick.style.display = "block"
+    }
+  })
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  })
 
 
 

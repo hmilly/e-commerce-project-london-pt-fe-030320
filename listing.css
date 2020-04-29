@@ -294,10 +294,12 @@ h3{
  
  /*-----------IMG GALLERY START BOX positions -----------*/
 .img-div{
-  height: 100%;
+  height: 98%;
   float: right;
   width: 78%;
   max-width: 1200px;
+  max-height: 1200px;
+  overflow: scroll;
 }
  .gallery {
   float: left;
@@ -419,9 +421,7 @@ h3{
  
 /* if under screen size: */
 @media screen and (max-width: 414px) {
-.body-main{
-  overflow: scroll;
-}
+
   .top-nav-l > a,
   .top-nav-r > a {
     display: none;
@@ -451,6 +451,7 @@ h3{
  
   .filter-img-div{
     margin-top: -12%;
+  
   }
   .filter-div{
     float:top;
@@ -484,6 +485,7 @@ h3{
 }
   .img-div{
     float:bottom;
+    overflow:scroll;
   }
    .gallery {
     float: left;
