@@ -75,77 +75,79 @@ textCatagory.addEventListener("click", () => {
   if (categorys.style.display === "none") {
     categorys.style.display = "block";
     angle2.className = "fa fa-angle-up down2"
-    list_item.forEach(g => g.style.display = "none")
-    checkboxForCategorys.forEach(box => box.checked === false)
+    list_item.forEach(i => i.style.display = "none")
+    checkboxForCategorys.forEach(i => i.checked = false)
   } else {
     categorys.style.display = "none";
     angle2.className = "fa fa-angle-down down2";
-    list_item.forEach(g => g.style.display = "block")
+    list_item.forEach(i => i.style.display = "block")
   }
 })
+
+
 
 // if each tickbox ticked, show gallery image
 let secondPitemFromImg = document.querySelectorAll(".name-type p:nth-child(2)")
-secondPitemFromImg.forEach(tick => {
+secondPitemFromImg.forEach(imageCat => {
+
   checkboxForCategorys[0].addEventListener("change", () => {
-    if (checkboxForCategorys[0].checked === true && tick.innerText == "CHAIR") {
-      tick.parentElement.parentElement.parentElement.style.display = "block"
-    } else if (checkboxForCategorys[0].checked === false && tick.innerText == "CHAIR") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
+    if (checkboxForCategorys[0].checked === true && imageCat.innerText == "CHAIR") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[0].checked === false && imageCat.innerText == "CHAIR") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
   checkboxForCategorys[1].addEventListener("change", () => {
-    if (checkboxForCategorys[1].checked === true && tick.innerText == "TABLE") {
-      tick.parentElement.parentElement.parentElement.style.display = "block"
-    } else if (checkboxForCategorys[1].checked === false && tick.innerText == "TABLE") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
+    if (checkboxForCategorys[1].checked === true && imageCat.innerText == "TABLE") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[1].checked === false && imageCat.innerText == "TABLE") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
   checkboxForCategorys[2].addEventListener("change", () => {
-    if (checkboxForCategorys[2].checked === true && tick.innerText == "BED") {
-      tick.parentElement.parentElement.parentElement.style.display = "block"
-    } else if (checkboxForCategorys[2].checked === false && tick.innerText == "BED") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
+    if (checkboxForCategorys[2].checked === true && imageCat.innerText == "BED") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[2].checked === false && imageCat.innerText == "BED") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
   checkboxForCategorys[3].addEventListener("change", () => {
-    if (checkboxForCategorys[3].checked === true && tick.innerText == "SOFA") {
-      tick.parentElement.parentElement.parentElement.style.display = "block"
-    } else if (checkboxForCategorys[3].checked === false && tick.innerText == "SOFA") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
+    if (checkboxForCategorys[3].checked === true && imageCat.innerText == "SOFA") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[3].checked === false && imageCat.innerText == "SOFA") {
+      imageCat.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
 })
 
+// price range filters
+let pr = [];
+var priceRange = document.querySelectorAll(".slidecontainer input")
+priceRange.forEach(p => pr.push(p))
 
+let priceFromImgDiv = document.querySelectorAll(".price p:nth-child(1)")
+priceFromImgDiv.forEach(price => {
+  pr[0].addEventListener("change", () => {
+    if (Number(price.innerText.slice(1)) >= Number(pr[0].value)) {
+      console.log(Number(pr[0].value))
+      price.parentElement.parentElement.parentElement.style.display = "block"
+    } else {
+      price.parentElement.parentElement.parentElement.style.display = "none"
+    }
+  })
+  pr[1].addEventListener("change", () => {
+    if (Number(price.innerText.slice(1)) <= Number(pr[1].value)) {
+      console.log(Number(pr[1].value))
+      price.parentElement.parentElement.parentElement.style.display = "block"
+    } else {
+      price.parentElement.parentElement.parentElement.style.display = "none"
+    }
+  })
 
-
-
-// who knows what the hell is going on here, I'm tired.
-var low = document.querySelector(".one")
-var high = document.querySelector(".two")
-let price = [];
-
-low.addEventListener("change", (l) => {
-
-  if (price.forEach(i => i <= l)) {
-    console.log(i)
-  }
-})
-
-high.addEventListener("change", (h) => {
-
-  if (price.forEach(i => i >= h)) {
-    console.log(i)
-
-  }
-})
-
-
-
+}
+)
 
 // item splits to 6 over 4 pages but doesn't display properLy. No idea how to do this.
-
 
 // list_item = each galley image item
 
@@ -184,7 +186,7 @@ displayList(list_item, list_element, itemNums, currentP);
 
 let name = [];
 let type = [];
-
+let price = [];
 let colors = [];
 let materials = [];
 let filling_materials = [];
@@ -230,7 +232,7 @@ colour.addEventListener("click", () => {
   } else {
     coloursDiv.style.display = "none";
     angle.className = "fa fa-angle-down down";
-    
+
   }
 });
 
@@ -256,10 +258,15 @@ galleryImage.forEach(tick => {
 
 })
 
+let checkb = []
+let cb = document.querySelectorAll(".checkmark")
 
+cb.forEach(i => checkb.push(i))
+console.log(checkb)
 
-
-
+if (checkb[0].checked === true) {
+  console.log("hello")
+}
 
 
 
