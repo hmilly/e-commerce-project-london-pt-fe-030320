@@ -162,6 +162,16 @@ i.fa.fa-angle-down.fdown{
   border: white solid 1px;
   border-bottom: rgba(179, 179, 179, 0.527) solid 1px;
 }
+.col{
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.cat{
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+}
 .colours{
   display: none;
   border-top: rgba(179, 179, 179, 0.527) solid 1px;

@@ -49,75 +49,73 @@ mediaAngle.addEventListener("click", () => {
   }
 });
 
-// colourDiv functionality //
-let coloursDiv = document.querySelector(".colours");
-let angle = document.querySelector(".down");
 
-colour.addEventListener("click", () => {
-  if (coloursDiv.style.display === "none") {
-    coloursDiv.style.display = "block";
-    angle.className = "fa fa-angle-up down";
-  } else {
-    coloursDiv.style.display = "none";
-    angle.className = "fa fa-angle-down down";
-  }
-});
+// All gallery items (20)
+let list_item = [];
+let galleryImage = document.querySelectorAll(".gallery")
+for (let i = 0; i < galleryImage.length; i++) {
+  list_item.push(galleryImage[i])
+}
 
-// category functionality //
-let category = document.querySelector(".category")
-let categorys = document.querySelector(".categorys")
-let angle2 = document.querySelector(".down2")
-
-category.addEventListener("click", () => {
-  if (categorys.style.display === "none") {
-    categorys.style.display = "block";
-    angle2.className = "fa fa-angle-up down2"
-  } else {
-    categorys.style.display = "none";
-    angle2.className = "fa fa-angle-down down2"
-  }
-})
-
-// working here on how to display gallery items selected in the listings (type)
+// ALL page checkboxes (col and cat)
 let allCheckboxes = document.querySelectorAll("input[type=checkbox]");
 let allCheckboxesArr = [];
 allCheckboxes.forEach(box => allCheckboxesArr.push(box))
 
-let catArr = allCheckboxesArr.slice(11, 15)
 
+// category functionality //
+let textCatagory = document.querySelector(".cat")
+let categorys = document.querySelector(".categorys")
+let angle2 = document.querySelector(".down2")
+
+let checkboxForCategorys = allCheckboxesArr.slice(11, 15)
+// if 'category' text clicked, gallery cleared until filter picked.
+// else all gallery shown
+textCatagory.addEventListener("click", () => {
+  if (categorys.style.display === "none") {
+    categorys.style.display = "block";
+    angle2.className = "fa fa-angle-up down2"
+    list_item.forEach(g => g.style.display = "none")
+    checkboxForCategorys.forEach(box => box.checked === false)
+  } else {
+    categorys.style.display = "none";
+    angle2.className = "fa fa-angle-down down2";
+    list_item.forEach(g => g.style.display = "block")
+  }
+})
+
+// if each tickbox ticked, show gallery image
 let secondPitemFromImg = document.querySelectorAll(".name-type p:nth-child(2)")
-
 secondPitemFromImg.forEach(tick => {
-  catArr[0].addEventListener("change", () => {
-    if (catArr[0].checked === true && tick.innerText !== "CHAIR") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
-    } else {
+  checkboxForCategorys[0].addEventListener("change", () => {
+    if (checkboxForCategorys[0].checked === true && tick.innerText == "CHAIR") {
       tick.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[0].checked === false && tick.innerText == "CHAIR") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
-  catArr[1].addEventListener("change", () => {
-    if (catArr[1].checked === true && tick.innerText !== "TABLE") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
-    } else {
+  checkboxForCategorys[1].addEventListener("change", () => {
+    if (checkboxForCategorys[1].checked === true && tick.innerText == "TABLE") {
       tick.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[1].checked === false && tick.innerText == "TABLE") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
-  catArr[2].addEventListener("change", () => {
-    if (catArr[2].checked === true && tick.innerText !== "BED") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
-    } else {
+  checkboxForCategorys[2].addEventListener("change", () => {
+    if (checkboxForCategorys[2].checked === true && tick.innerText == "BED") {
       tick.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[2].checked === false && tick.innerText == "BED") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
-  catArr[3].addEventListener("change", () => {
-    if (catArr[3].checked === true && tick.innerText !== "SOFA") {
-      tick.parentElement.parentElement.parentElement.style.display = "none"
-    } else {
+  checkboxForCategorys[3].addEventListener("change", () => {
+    if (checkboxForCategorys[3].checked === true && tick.innerText == "SOFA") {
       tick.parentElement.parentElement.parentElement.style.display = "block"
+    } else if (checkboxForCategorys[3].checked === false && tick.innerText == "SOFA") {
+      tick.parentElement.parentElement.parentElement.style.display = "none"
     }
   })
 })
-
 
 
 
@@ -147,11 +145,9 @@ high.addEventListener("change", (h) => {
 
 
 // item splits to 6 over 4 pages but doesn't display properLy. No idea how to do this.
-let list_item = [];
-let galleryImage = document.querySelectorAll(".gallery")
-for (let i = 0; i < galleryImage.length; i++) {
-  list_item.push(galleryImage[i])
-}
+
+
+// list_item = each galley image item
 
 let list_element = document.getElementsByClassName("img-div")
 
@@ -221,6 +217,26 @@ let unique2 = [...new Set(type)];
 
 
 
+
+// colourDiv functionality //
+let coloursDiv = document.querySelector(".colours");
+let angle = document.querySelector(".down");
+
+colour.addEventListener("click", () => {
+  if (coloursDiv.style.display === "none") {
+    coloursDiv.style.display = "block";
+    angle.className = "fa fa-angle-up down";
+
+  } else {
+    coloursDiv.style.display = "none";
+    angle.className = "fa fa-angle-down down";
+    
+  }
+});
+
+
+
+
 // working here on how to display gallery items selected in the listings (type)
 let colourArr = allCheckboxesArr.slice(0, 11)
 
@@ -229,7 +245,7 @@ console.log(colors)
 galleryImage.forEach(tick => {
 
   colourArr[0].addEventListener("change", () => {
-    if (colourArr[0].checked === true ) {
+    if (colourArr[0].checked === true) {
       tick.style.display = "none"
     } else {
       tick.style.display = "block"
@@ -238,31 +254,7 @@ galleryImage.forEach(tick => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  })
-
-
-
-
-
+})
 
 
 
