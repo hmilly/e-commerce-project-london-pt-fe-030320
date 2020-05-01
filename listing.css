@@ -108,7 +108,27 @@
   height: 50%;
   width: 25%;
   border-bottom: rgba(128, 128, 128, 0.527) solid 1px;
+  cursor: pointer;
 }
+.bestmatchs{
+  display: none;
+  color: rgb(15, 15, 15);
+  margin-top: 9px;
+  padding: 0;
+  width: 25%;
+  padding-left: 1%;
+  cursor: pointer;
+}
+.bestmatchs *{
+
+  border-radius: 5%;
+  position: relative;
+  margin: 1px;
+  padding: 1px;
+  text-align: left;
+
+}
+
 .fa-angle-down, .fa-angle-up{
   position: relative;
   font-size: 150%;

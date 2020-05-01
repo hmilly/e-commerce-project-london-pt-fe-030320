@@ -50,6 +50,7 @@ mediaAngle.addEventListener("click", () => {
 });
 
 
+
 // All gallery items (20)
 let list_item = [];
 let galleryImage = document.querySelectorAll(".gallery")
@@ -120,32 +121,71 @@ secondPitemFromImg.forEach(imageCat => {
   })
 })
 
-// price range filters
-let pr = [];
-var priceRange = document.querySelectorAll(".slidecontainer input")
-priceRange.forEach(p => pr.push(p))
+
+
+// price range filters working!
+let priceRange = [];
+var priceRangeS = document.querySelectorAll(".slidecontainer input")
+priceRangeS.forEach(p => priceRange.push(p))
 
 let priceFromImgDiv = document.querySelectorAll(".price p:nth-child(1)")
-priceFromImgDiv.forEach(price => {
-  pr[0].addEventListener("change", () => {
-    if (Number(price.innerText.slice(1)) >= Number(pr[0].value)) {
-      console.log(Number(pr[0].value))
-      price.parentElement.parentElement.parentElement.style.display = "block"
-    } else {
-      price.parentElement.parentElement.parentElement.style.display = "none"
-    }
-  })
-  pr[1].addEventListener("change", () => {
-    if (Number(price.innerText.slice(1)) <= Number(pr[1].value)) {
-      console.log(Number(pr[1].value))
-      price.parentElement.parentElement.parentElement.style.display = "block"
-    } else {
-      price.parentElement.parentElement.parentElement.style.display = "none"
-    }
-  })
+priceFromImgDiv.forEach(productPrice => {
 
-}
-)
+  priceRange.forEach(p => p.addEventListener("change", () => {
+    if (Number(productPrice.innerText.slice(1)) >= Number(priceRange[0].value) 
+    && Number(productPrice.innerText.slice(1)) <= Number(priceRange[1].value)) {
+      productPrice.parentElement.parentElement.parentElement.style.display = "block"
+    } else {
+      productPrice.parentElement.parentElement.parentElement.style.display = "none"
+    }
+  }))
+})
+
+
+
+//bestmatch div clicked to open panel
+let bestmatch = document.querySelector(".bestmatch")
+let bestmatchs = document.querySelector(".bestmatchs");
+let bmdown = document.querySelector(".bmdown")
+
+bestmatch.addEventListener("click", () => {
+  if (bestmatchs.style.display === "none") {
+    bestmatchs.style.display = "block"
+    bmdown.className = "fa fa-angle-up bmdown"
+  } else {
+    bestmatchs.style.display = "none"
+    bmdown.className = "fa fa-angle-down bmdown"
+  }
+});
+
+
+let defa = document.querySelector(".default")
+let low = document.querySelector(".low");
+let high = document.querySelector(".high")
+
+
+console.log(list_item)
+defa.addEventListener("click", () => {
+  list_item.forEach(item => item.style.display = "block")
+})
+low.addEventListener("click", () => {
+  priceFromImgDiv.forEach(productPrice => {
+    console.log(productPrice)
+    productPrice.sort((a,b)=> b-a)
+  })
+})
+high.addEventListener("click", () => {
+  priceFromImgDiv.forEach(productPrice => {
+    productPrice.sort((a,b)=> a-b)
+  })
+})
+
+
+
+
+
+
+
 
 // item splits to 6 over 4 pages but doesn't display properLy. No idea how to do this.
 
